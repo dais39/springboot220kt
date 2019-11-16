@@ -7,6 +7,13 @@ import org.springframework.boot.context.properties.ConstructorBinding
 import org.springframework.boot.runApplication
 import org.springframework.stereotype.Component
 
+/*
+ * Spring Boot 2.2.0では、@ConfigurationPropertiesを付与した設定クラスは、
+ * @SpringBootApplicationが付与されたJavaConfigがあれば自動的にスキャン対象となる。
+ *
+ * また@ConstructorBindingを付与することでConstructorを使って設定ファイルの値を設定クラスのフィールドにマッピングしてくれるので、
+ * セッターを用意する必要がない。
+ */
 @SpringBootApplication
 class Springboot220KtApplication
 
